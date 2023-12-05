@@ -3,38 +3,101 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Skocko.MainPage">
 
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HeightRequest" Value="50"></Setter>
+            <Setter Property="WidthRequest" Value="44"></Setter>
+            <Setter Property="BackgroundColor" Value="LightBlue"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+        </Style>
+    </ContentPage.Resources>
+    
+    
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
+        <VerticalStackLayout>
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                x:Name="timeLabel"
+                Text="Time:"
+                HorizontalTextAlignment="Center"
+                FontSize="30">
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            </Label>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48"/>
+                    <ColumnDefinition Width="48"/>
+                    <ColumnDefinition Width="48"/>
+                    <ColumnDefinition Width="48"/>
+                    <ColumnDefinition Width="149"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                
+                
+
+                <Button x:Name="button1" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="button2" Grid.Row="0" Grid.Column="1"/>
+                <Button x:Name="button3" Grid.Row="0" Grid.Column="2"/>
+                <Button x:Name="button4" Grid.Row="0" Grid.Column="3"/>
+                
+                <Button x:Name="button5" Grid.Row="1" Grid.Column="0"/>
+                <Button x:Name="button6" Grid.Row="1" Grid.Column="1"/>
+                <Button x:Name="button7" Grid.Row="1" Grid.Column="2"/>
+                <Button x:Name="button8" Grid.Row="1" Grid.Column="3"/>
+
+                <Button x:Name="button9" Grid.Row="2" Grid.Column="0"/>
+                <Button x:Name="button10" Grid.Row="2" Grid.Column="1"/>
+                <Button x:Name="button11" Grid.Row="2" Grid.Column="2"/>
+                <Button x:Name="button12" Grid.Row="2" Grid.Column="3"/>
+                
+                <Button x:Name="button13" Grid.Row="3" Grid.Column="0"/>
+                <Button x:Name="button14" Grid.Row="3" Grid.Column="1"/>
+                <Button x:Name="button15" Grid.Row="3" Grid.Column="2"/>
+                <Button x:Name="button16" Grid.Row="3" Grid.Column="3"/>
+                
+                <Button x:Name="button17" Grid.Row="4" Grid.Column="0"/>
+                <Button x:Name="button18" Grid.Row="4" Grid.Column="1"/>
+                <Button x:Name="button19" Grid.Row="4" Grid.Column="2"/>
+                <Button x:Name="button20" Grid.Row="4" Grid.Column="3"/>
+                
+                <Button x:Name="button21" Grid.Row="5" Grid.Column="0"/>
+                <Button x:Name="button22" Grid.Row="5" Grid.Column="1"/>
+                <Button x:Name="button23" Grid.Row="5" Grid.Column="2"/>
+                <Button x:Name="button24" Grid.Row="5" Grid.Column="3"/>
+
+                <Button x:Name="symbol1" Text="🦉" Grid.Row="0" Grid.Column="8" WidthRequest="50" FontSize="Medium"/>
+                <Button x:Name="symbol2" Text="♣" Grid.Row="1" Grid.Column="8" WidthRequest="50" FontSize="Medium"/>
+                <Button x:Name="symbol3" Text="♠" Grid.Row="2" Grid.Column="8" WidthRequest="50" FontSize="Medium"/>
+                <Button x:Name="symbol4" Text="❤" Grid.Row="3" Grid.Column="8" WidthRequest="50" FontSize="Medium"/>
+                <Button x:Name="symbol5" Text="♦" Grid.Row="4" Grid.Column="8" WidthRequest="50" FontSize="Medium"/>
+                <Button x:Name="symbol6" Text="🌟" Grid.Row="5" Grid.Column="8" WidthRequest="50" FontSize="Medium"/>
+
+                <Label x:Name="results1" Grid.Row="0" Grid.Column="4" WidthRequest="138" IsVisible="false" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="results2" Grid.Row="1" Grid.Column="4" WidthRequest="138" IsVisible="false" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="results3" Grid.Row="2" Grid.Column="4" WidthRequest="138" IsVisible="false" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="results4" Grid.Row="3" Grid.Column="4" WidthRequest="138" IsVisible="false" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="results5" Grid.Row="4" Grid.Column="4" WidthRequest="138" IsVisible="false" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="results6" Grid.Row="5" Grid.Column="4" WidthRequest="138" IsVisible="false" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+
+
+
+
+                <Button x:Name="checkButton" Clicked="checkButton_Clicked" Text="Check" Grid.Row="0" Grid.Column="4" WidthRequest="130" IsVisible="false"/>
+
+                <Label x:Name="correct" Grid.Row="5" Grid.Column="5"></Label>
+
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 
